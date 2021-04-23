@@ -1352,10 +1352,8 @@ shinyServer(function(input, output, session) {
       updateNumericInput(session, inputId = "power30", value = round(Power, 6))
     }
   })
-})
-
-output$keepAlive <- renderText({
+  output$keepAlive <- renderText({
       req(input$count)
       paste("keep alive ", input$count)
     })
-
+})
