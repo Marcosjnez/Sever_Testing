@@ -1,7 +1,7 @@
 library(shiny)
 library(shinydashboard)
 
-server <- function(input, output, session) {
+shinyServer(function(input, output, session) {
   Sever.Z.one <- function(n, dif, sigma, alpha, plot=TRUE, axis=FALSE) {
     validate(
       need(exists("dif", mode="integer"), "Set the difference between means"),
@@ -1351,4 +1351,4 @@ server <- function(input, output, session) {
       updateNumericInput(session, inputId = "power30", value = round(Power, 6))
     }
   })
-}
+})
