@@ -2,7 +2,7 @@ library(shiny)
 library(shinydashboard)
 library(shinyjs)
 
-tags$head(
+fluidPage(tags$head(
         HTML(
           "
           <script>
@@ -19,11 +19,11 @@ tags$head(
           </script>
           "
         )
-        )
+        ),
 
-textOutput("keepAlive")
-
-fluidPage(inlineCSS(list(body = "color:DarkBlue")),
+textOutput("keepAlive"),
+        
+        inlineCSS(list(body = "color:DarkBlue")),
           titlePanel("Severe Testing"),
           tabsetPanel(
             tabPanel("Severity curves",
