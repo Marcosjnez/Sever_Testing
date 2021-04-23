@@ -1,5 +1,6 @@
 library(shiny)
 library(shinydashboard)
+library(shinyjs)
 
 shinyServer(function(input, output, session) {
   Sever.Z.one <- function(n, dif, sigma, alpha, plot=TRUE, axis=FALSE) {
