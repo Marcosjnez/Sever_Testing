@@ -1,7 +1,8 @@
 library(shiny)
 library(shinydashboard)
+library(shinyjs)
 
-fluidPage(shinyjs::inlineCSS(list(body = "color:DarkBlue")),
+fluidPage(inlineCSS(list(body = "color:DarkBlue")),
           titlePanel("Severe Testing"),
           tabsetPanel(
             tabPanel("Severity curves",
